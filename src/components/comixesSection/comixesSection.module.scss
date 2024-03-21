@@ -1,0 +1,153 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+padding: 0;
+margin: 0;
+}
+
+img{
+width: 100%;
+height: auto;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+} 
+
+a{
+text-decoration: none;
+cursor: pointer;
+}
+
+.title{
+    color: #2B1E18;
+text-align: center;
+font-family: "Montserrat", sans-serif;
+font-size: 44px;
+font-style: normal;
+font-weight: 700;
+line-height: 44px; /* 100% */
+letter-spacing: -1.2px;
+margin-top: 64px;
+}
+
+.comixesMainThumb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+.comixesInnerThumb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 54px;
+    gap: 32px;
+
+
+    @media (min-width: 1140px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 1140px;
+
+    }
+}
+
+.cardThumb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 294px;
+    border-radius: 10px;
+}
+
+.cardImage{
+    width: 294px;
+}
+
+.button{
+    color: #FFF;
+text-align: center;
+font-family: "Montserrat",sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+width: 164px;
+height: 49px;
+flex-shrink: 0;
+border-radius: 7px;
+background: #68D585;
+border: none;
+cursor: pointer;
+}
+
+.cardTitle{
+    color: #2B1E18;
+font-family: "Montserrat",sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 177.778% */
+letter-spacing: -0.5px;
+text-align: start;
+width: 100%;
+margin-top: 15px;
+}
+
+.idThumb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cardText{
+    color: #2B1E18;
+    font-family: "Montserrat",sans-serif;
+    font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 177.778% */
+letter-spacing: -0.5px;
+}
+
+.cardId{
+    color: #68D585;
+text-align: right;
+font-family: "Montserrat",sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 29px; /* 161.111% */
+letter-spacing: -0.2px;
+}
+
+.cardButtonThumb{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 19px;
+}
