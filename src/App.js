@@ -9,6 +9,7 @@ import ComixesSection from './components/comixesSection';
 import BlueSection from './components/blueSection';
 import UserSection from './components/userSection';
 import MapSection from './components/mapSection';
+import Footer from './components/footerSection';
 
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 1140 });
@@ -38,6 +39,7 @@ function App() {
       <BlueSection />
       <UserSection/>
       <MapSection/>
+      <Footer/>
 
     </>
   );
