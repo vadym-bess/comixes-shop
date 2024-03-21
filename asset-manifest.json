@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/comixes-shop/static/css/main.041de6bb.css",
-    "main.js": "/comixes-shop/static/js/main.f3e8d2a6.js",
+    "main.css": "/comixes-shop/static/css/main.0441c8e3.css",
+    "main.js": "/comixes-shop/static/js/main.f6039921.js",
     "static/js/453.8b34821b.chunk.js": "/comixes-shop/static/js/453.8b34821b.chunk.js",
     "static/media/bg-web.jpg": "/comixes-shop/static/media/bg-web.ff00dd012931838da010.jpg",
     "static/media/bg-mob.jpg": "/comixes-shop/static/media/bg-mob.05aa59f8125c0eeb120f.jpg",
+    "static/media/books.jpg": "/comixes-shop/static/media/books.6f77a3e680f85a296959.jpg",
     "static/media/warrior.jpg": "/comixes-shop/static/media/warrior.8aa251be39123a60306e.jpg",
     "static/media/monkey.jpg": "/comixes-shop/static/media/monkey.1f89ee530a61280d2818.jpg",
     "static/media/eagle.jpg": "/comixes-shop/static/media/eagle.da1fdb1a9ee107b74805.jpg",
     "static/media/lion.jpg": "/comixes-shop/static/media/lion.bfc346af0d4c169ee43e.jpg",
     "static/media/tiger.jpg": "/comixes-shop/static/media/tiger.91ef0114244386b886c9.jpg",
     "static/media/fisher.jpg": "/comixes-shop/static/media/fisher.b1e0a5ff767f442388f2.jpg",
+    "static/media/user.png": "/comixes-shop/static/media/user.bf4faba3a52f40e8e601.png",
     "index.html": "/comixes-shop/index.html",
-    "main.041de6bb.css.map": "/comixes-shop/static/css/main.041de6bb.css.map",
-    "main.f3e8d2a6.js.map": "/comixes-shop/static/js/main.f3e8d2a6.js.map",
+    "main.0441c8e3.css.map": "/comixes-shop/static/css/main.0441c8e3.css.map",
+    "main.f6039921.js.map": "/comixes-shop/static/js/main.f6039921.js.map",
     "453.8b34821b.chunk.js.map": "/comixes-shop/static/js/453.8b34821b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.041de6bb.css",
-    "static/js/main.f3e8d2a6.js"
+    "static/css/main.0441c8e3.css",
+    "static/js/main.f6039921.js"
   ]
 }
