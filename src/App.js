@@ -9,6 +9,9 @@ import CookiePolicy from './pages/cookiePolicy';
 import RulesAndConditions from './pages/rulesAndConditions';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Footer from './components/footerSection';
+import Modal from './components/modal';
+import Cart from './pages/cart';
+
 
 
 function App() {
@@ -35,10 +38,12 @@ function App() {
       <Route path="/confidential" element={ <ConfidentialPolicy/>}/>
       <Route path="/cookiepolicy" element={<CookiePolicy/>}/>
       <Route path="/rooles" element={<RulesAndConditions/>}/>
+      <Route path="/cart" element={<Cart/>}/>
       <Route path="*" element={<Navigate to="/" />}/> 
+      
 
 </Routes>
-    
+       <Modal/>
        <Footer/>
     </>
   );

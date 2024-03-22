@@ -15,10 +15,16 @@ function Home() {
         <>
       <HeroSection />
       <Populars />
-      <ComixesSection/>
+      <div id="comixes">
+          <ComixesSection />
+      </div>
+      <div id="aboutUs">
       <BlueSection />
+      </div>
       <UserSection/>
+      <div id="comunication">
       <MapSection/>
+      </div>
       
         </>
     )

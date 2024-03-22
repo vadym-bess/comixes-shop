@@ -17,12 +17,14 @@ function HeaderWeb() {
          <img className={styles.logo} src={logo} alt="logo" />
     </Link>
     <nav className={styles.navigationThumb}>
-      <p className={styles.navLink} to="#">আমাদের সম্পর্কে</p>
-      <p className={styles.navLink} to="#">দোকান</p>
-      <p className={styles.navLink} to="#">পর্যালোচনা</p>
-      <p className={styles.navLink} to="#">যোগাযোগ</p>
+      <a href="#aboutUs" className={styles.navLink} to="#">আমাদের সম্পর্কে</a>
+      <a href="#comixes" className={styles.navLink} to="#">দোকান</a>
+      <a href="#comunication" className={styles.navLink} to="#">পর্যালোচনা</a>
+      <a href="#comunication" className={styles.navLink} to="#">যোগাযোগ</a>
     </nav>
-    <img className={styles.cart} src={cart} alt="cart" />
+    <Link to="/cart">
+          <img className={styles.cart} src={cart} alt="cart" />
+    </Link>
 </div>
     )
 }

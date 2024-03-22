@@ -14,7 +14,10 @@ function HeaderMob() {
     <Link to="/">
          <img className={styles.logo} src={logo} alt="logo" />
     </Link>
+    <Link to="/cart">
     <img className={styles.cart} src={cart} alt="logo" />
+    </Link>
+    
 
 </div>
     )
