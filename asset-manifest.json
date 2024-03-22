@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/comixes-shop/static/css/main.cac9e608.css",
-    "main.js": "/comixes-shop/static/js/main.e00b5c51.js",
+    "main.css": "/comixes-shop/static/css/main.7022fb43.css",
+    "main.js": "/comixes-shop/static/js/main.dcc15825.js",
     "static/js/453.8b34821b.chunk.js": "/comixes-shop/static/js/453.8b34821b.chunk.js",
-    "static/media/bg-web.jpg": "/comixes-shop/static/media/bg-web.ff00dd012931838da010.jpg",
-    "static/media/bg-mob.jpg": "/comixes-shop/static/media/bg-mob.05aa59f8125c0eeb120f.jpg",
-    "static/media/books.jpg": "/comixes-shop/static/media/books.6f77a3e680f85a296959.jpg",
-    "static/media/warrior.jpg": "/comixes-shop/static/media/warrior.8aa251be39123a60306e.jpg",
-    "static/media/monkey.jpg": "/comixes-shop/static/media/monkey.1f89ee530a61280d2818.jpg",
-    "static/media/eagle.jpg": "/comixes-shop/static/media/eagle.da1fdb1a9ee107b74805.jpg",
-    "static/media/lion.jpg": "/comixes-shop/static/media/lion.bfc346af0d4c169ee43e.jpg",
-    "static/media/tiger.jpg": "/comixes-shop/static/media/tiger.91ef0114244386b886c9.jpg",
-    "static/media/fisher.jpg": "/comixes-shop/static/media/fisher.b1e0a5ff767f442388f2.jpg",
+    "static/media/bg-web.jpg": "/comixes-shop/static/media/bg-web.4bd25a4232b04c584ea3.jpg",
+    "static/media/bg-mob.jpg": "/comixes-shop/static/media/bg-mob.d3fedbe04d45a06c4820.jpg",
+    "static/media/warrior.jpg": "/comixes-shop/static/media/warrior.ea7b5fdd6d17e0835963.jpg",
+    "static/media/monkey.jpg": "/comixes-shop/static/media/monkey.69bc54a441478bb73ab4.jpg",
+    "static/media/eagle.jpg": "/comixes-shop/static/media/eagle.016920809b5c14d1842c.jpg",
+    "static/media/books.jpg": "/comixes-shop/static/media/books.995a173777c58534aceb.jpg",
+    "static/media/lion.jpg": "/comixes-shop/static/media/lion.bc6f35c25368d74a8722.jpg",
+    "static/media/tiger.jpg": "/comixes-shop/static/media/tiger.18ecbd23907386e8e4df.jpg",
+    "static/media/fisher.jpg": "/comixes-shop/static/media/fisher.1a1051b2b16eab060eb0.jpg",
     "static/media/user.png": "/comixes-shop/static/media/user.bf4faba3a52f40e8e601.png",
     "index.html": "/comixes-shop/index.html",
-    "main.cac9e608.css.map": "/comixes-shop/static/css/main.cac9e608.css.map",
-    "main.e00b5c51.js.map": "/comixes-shop/static/js/main.e00b5c51.js.map",
+    "main.7022fb43.css.map": "/comixes-shop/static/css/main.7022fb43.css.map",
+    "main.dcc15825.js.map": "/comixes-shop/static/js/main.dcc15825.js.map",
     "453.8b34821b.chunk.js.map": "/comixes-shop/static/js/453.8b34821b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cac9e608.css",
-    "static/js/main.e00b5c51.js"
+    "static/css/main.7022fb43.css",
+    "static/js/main.dcc15825.js"
   ]
 }
