@@ -15,7 +15,10 @@ function HeaderMob() {
          <img className={styles.logo} src={logo} alt="logo" />
     </Link>
     <Link to="/cart">
-    <img className={styles.cart} src={cart} alt="logo" />
+        <div className={styles.cartThumb}>
+            <img className={styles.cart} src={cart} alt="logo" />
+            <div className={styles.qantityThumb}>2</div>
+        </div>
     </Link>
     
 

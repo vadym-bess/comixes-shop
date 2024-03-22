@@ -54,14 +54,24 @@ cursor: pointer;
 }
 
 .cart{
-    width: 20px;
+    width: 30px;
     cursor: pointer;
     margin-right: 20px;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
 }
 
 .logo{
     width: 54px;
     cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
 }
 
 .navLink{
@@ -72,4 +82,30 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 cursor: pointer;
+
+&:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+}
+
+.cartThumb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.qantityThumb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background-color: #42D76A;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
 }

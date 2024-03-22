@@ -23,7 +23,10 @@ function HeaderWeb() {
       <a href="#comunication" className={styles.navLink} to="#">যোগাযোগ</a>
     </nav>
     <Link to="/cart">
-          <img className={styles.cart} src={cart} alt="cart" />
+        <div className={styles.cartThumb}>
+            <img className={styles.cart} src={cart} alt="logo" />
+            <div className={styles.qantityThumb}>2</div>
+        </div>
     </Link>
 </div>
     )

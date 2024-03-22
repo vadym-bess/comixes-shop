@@ -52,7 +52,7 @@ function Modal() {
         <div className={styles.modalBackground}>
           <div className={styles.modal}>
             <div className={styles.modalContent}>
-              <span className={styles.close} onClick={() => setIsOpen(false)}>&times;</span>
+              {/* <span className={styles.close} onClick={() => setIsOpen(false)}>&times;</span> */}
               <p className={styles.modalText}>আমাদের পৃষ্ঠাটি আপনার অভিজ্ঞতা উন্নত করতে কুকিজ ব্যবহার করে। আপনি চাইলে তাদের নিষ্ক্রিয় করতে পারেন, কিন্তু এটি ওয়েবসাইটের কিছু কার্যক্ষমতা সীমিত করতে পারে। আমাদের কুকি নীতি দেখুন।</p>
               <div className={styles.buttonThumb}>
                 <button onClick={() => setIsOpen(false)} className={styles.leftButton}>সব কুকিজকে গ্রহণ করুন</button>
