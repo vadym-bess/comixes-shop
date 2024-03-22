@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/comixes-shop/static/css/main.0441c8e3.css",
-    "main.js": "/comixes-shop/static/js/main.f6039921.js",
+    "main.css": "/comixes-shop/static/css/main.5e2248d9.css",
+    "main.js": "/comixes-shop/static/js/main.a80a669a.js",
     "static/js/453.8b34821b.chunk.js": "/comixes-shop/static/js/453.8b34821b.chunk.js",
     "static/media/bg-web.jpg": "/comixes-shop/static/media/bg-web.ff00dd012931838da010.jpg",
     "static/media/bg-mob.jpg": "/comixes-shop/static/media/bg-mob.05aa59f8125c0eeb120f.jpg",
@@ -14,12 +14,12 @@
     "static/media/fisher.jpg": "/comixes-shop/static/media/fisher.b1e0a5ff767f442388f2.jpg",
     "static/media/user.png": "/comixes-shop/static/media/user.bf4faba3a52f40e8e601.png",
     "index.html": "/comixes-shop/index.html",
-    "main.0441c8e3.css.map": "/comixes-shop/static/css/main.0441c8e3.css.map",
-    "main.f6039921.js.map": "/comixes-shop/static/js/main.f6039921.js.map",
+    "main.5e2248d9.css.map": "/comixes-shop/static/css/main.5e2248d9.css.map",
+    "main.a80a669a.js.map": "/comixes-shop/static/js/main.a80a669a.js.map",
     "453.8b34821b.chunk.js.map": "/comixes-shop/static/js/453.8b34821b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0441c8e3.css",
-    "static/js/main.f6039921.js"
+    "static/css/main.5e2248d9.css",
+    "static/js/main.a80a669a.js"
   ]
 }
