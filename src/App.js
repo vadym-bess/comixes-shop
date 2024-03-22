@@ -3,22 +3,20 @@ import React from 'react';
 import HeaderMob from './components/headerMob';
 import HeaderWeb from './components/headerWeb';
 import { useMediaQuery } from 'react-responsive';
-import HeroSection from './components/heroSection';
-import Populars from './components/populars';
-import ComixesSection from './components/comixesSection';
-import BlueSection from './components/blueSection';
-import UserSection from './components/userSection';
-import MapSection from './components/mapSection';
+import Home from './pages/home';
+import ConfidentialPolicy from './pages/confidentialPolicy';
+import CookiePolicy from './pages/cookiePolicy';
+import RulesAndConditions from './pages/rulesAndConditions';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Footer from './components/footerSection';
+
 
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 1140 });
 
+
+
   const mainThumbStyle = {
-    // display: 'flex',
-    // flexDirection: 'column',
-    // alignItems: 'center',
-    // justifyContent: 'center',
     maxWidth: '1140px',
     margin: '0 auto',
   };
@@ -27,20 +25,21 @@ function App() {
     <>
       <div style={mainThumbStyle}>
         {isDesktop ? (
-          <HeaderWeb/>
+          <HeaderWeb />
         ) : (
           <HeaderMob/>
         )}
       </div>
+<Routes>
+      <Route exact path="/" element={<Home/>}/>     
+      <Route path="/confidential" element={ <ConfidentialPolicy/>}/>
+      <Route path="/cookiepolicy" element={<CookiePolicy/>}/>
+      <Route path="/rooles" element={<RulesAndConditions/>}/>
+      <Route path="*" element={<Navigate to="/" />}/> 
 
-      <HeroSection />
-      <Populars />
-      <ComixesSection/>
-      <BlueSection />
-      <UserSection/>
-      <MapSection/>
-      <Footer/>
-
+</Routes>
+    
+       <Footer/>
     </>
   );
 }
