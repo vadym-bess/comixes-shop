@@ -322,3 +322,25 @@ letter-spacing: -0.2px;
         transition: transform 0.3s ease;
     }
 }
+
+
+.emptyCartImage{
+    width: 300px;
+}
+
+
+.emptyCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.emptyCartText{
+    font-family: "Montserrat", sans-serif;
+    font-size: 19px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 168.421% */
+letter-spacing: -0.2px;
+}

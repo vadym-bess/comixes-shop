@@ -148,6 +148,7 @@ import fisher from '../../components/images/fisher.jpg';
 import warrior from '../../components/images/warrior.jpg';
 import monkey from '../../components/images/monkey.jpg';
 import tiger from '../../components/images/tiger.jpg';
+import emptyCartImage from '../../components/images/empty-cart.webp'
 
 const imageMap = {
     eagle: eagle,
@@ -243,47 +244,58 @@ function Cart() {
                     <p>এআপনার কার্টে {cartItems.length} আইটেম।</p>
                 </div>
 
-                {cartItems.map(item => (
-                    <div key={item.id} className={styles.cartItem}>
-                        <div className={styles.cartInnerThumb}>
-                            <div className={styles.pictureThumb}>
-                                <div className={styles.cartImageThumb}>
-                                    <p className={styles.imageTitle}>পণ্য</p>
-                                    <img className={styles.itemImage} src={getImage(item)} alt={item.title} />  
+                {cartItems.length === 0 ? (
+                    <div className={styles.emptyCart}>
+                        <img src={emptyCartImage} alt="Empty Cart" className={styles.emptyCartImage} />
+                        <p className={styles.emptyCartText}>তোমার থলে তো খালি</p>
+                    </div>
+                ) : 
+                    cartItems.map(item => (
+                        <div key={item.id} className={styles.cartItem}>
+                            <div className={styles.cartInnerThumb}>
+                                <div className={styles.pictureThumb}>
+                                    <div className={styles.cartImageThumb}>
+                                        <p className={styles.imageTitle}>পণ্য</p>
+                                        <img className={styles.itemImage} src={getImage(item)} alt={item.title} />  
+                                    </div>
+                                    <p className={styles.itemTitle}>{item.title}</p>
+                                    <span className={styles.close} onClick={() => handleRemoveItem(item.id)}>&times;</span>
                                 </div>
-                                <p className={styles.itemTitle}>{item.title}</p>
-                                <span className={styles.close} onClick={() => handleRemoveItem(item.id)}>&times;</span>
-                            </div>
-                            <div className={styles.pictureThumb}>
-                                <p className={styles.priceTitle}>মূল্য:</p>
-                                <p className={styles.itemPrice}>BDT {item.price}</p>
-                            </div>
-                            <div className={styles.quantityThumb}>
-                                <p className={styles.quantityTitle}>পরিমাণ</p>
-                                <div className={styles.calculator}>
-                                    <button onClick={() => handleQuantityChange(item.id, item.quantity - 1)} className={styles.minus}>-</button>
-                                    <div className={styles.sum}>{item.quantity}</div>
-                                    <button onClick={() => handleQuantityChange(item.id, item.quantity + 1)} className={styles.plus}>+</button>
+                                <div className={styles.pictureThumb}>
+                                    <p className={styles.priceTitle}>মূল্য:</p>
+                                    <p className={styles.itemPrice}>BDT {item.price}</p>
+                                </div>
+                                <div className={styles.quantityThumb}>
+                                    <p className={styles.quantityTitle}>পরিমাণ</p>
+                                    <div className={styles.calculator}>
+                                        <button onClick={() => handleQuantityChange(item.id, item.quantity - 1)} className={styles.minus}>-</button>
+                                        <div className={styles.sum}>{item.quantity}</div>
+                                        <button onClick={() => handleQuantityChange(item.id, item.quantity + 1)} className={styles.plus}>+</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    ))}
+                    <br />
+                    <hr />
+                    <div className={styles.totalThumb}>
+                        <p className={styles.totalText}>মোট</p>
+                        <p className={styles.totalAmount}>BDT {totalPrice}</p>
                     </div>
-                ))}
-                <br />
-                <hr />
-                <div className={styles.totalThumb}>
-                    <p className={styles.totalText}>মোট</p>
-                    <p className={styles.totalAmount}>BDT {totalPrice}</p>
-                </div>
-                <div className={styles.buttonsThumb}>
-                    <Link to="/">
-                        <button className={styles.whiteButton}>কেনাকাটা চালিয়ে যান</button>
-                    </Link>
-                    <button className={styles.redButton}>পর্যালোচনা</button>
+                    <div className={styles.buttonsThumb}>
+                        <Link to="/">
+                            <button className={styles.whiteButton}>কেনাকাটা চালিয়ে যান</button>
+                        </Link>
+                        <button className={styles.redButton}>পর্যালোচনা</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+                    
+                
+                
+                
+                
 }
 
 export default Cart;
