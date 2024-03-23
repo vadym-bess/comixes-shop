@@ -24,16 +24,8 @@ function App() {
    
     axios.get('https://65fe77d8b2a18489b3861712.mockapi.io/comixes').then((res) => {
       setItems(res.data);
-      console.log(res.data)
     });
   }, []);
-
-  // const onAddToCart = (obj) => {
-  //   axios.post('https://65fe77d8b2a18489b3861712.mockapi.io/cart', obj);
-  //   if (!cartItems.some((item) => item.id === obj.id)) {
-  //     setCartItems((prev) => [...prev, obj]);
-  //   }
-  // };
 
 
 
@@ -46,7 +38,7 @@ function App() {
     <>
       <div style={mainThumbStyle}>
         {isDesktop ? (
-          <HeaderWeb />
+          <HeaderWeb/>
         ) : (
           <HeaderMob/>
         )}
@@ -56,7 +48,7 @@ function App() {
       <Route path="/confidential" element={ <ConfidentialPolicy/>}/>
       <Route path="/cookiepolicy" element={<CookiePolicy/>}/>
       <Route path="/rooles" element={<RulesAndConditions/>}/>
-      <Route path="/cart" element={<Cart/>}/>
+      <Route path="/cart" element={<Cart />}/>
       <Route path="*" element={<Navigate to="/" />}/> 
       
 

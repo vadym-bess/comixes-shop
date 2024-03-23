@@ -17,7 +17,6 @@ function HeaderMob() {
     <Link to="/cart">
         <div className={styles.cartThumb}>
             <img className={styles.cart} src={cart} alt="logo" />
-            <div className={styles.qantityThumb}>2</div>
         </div>
     </Link>
     

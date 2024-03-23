@@ -12,21 +12,21 @@ function Home({onAddToCard, items}) {
   
 
     return(
-        <>
+  <>
       <HeroSection />
       <Populars />
       <div id="comixes">
-      <ComixesSection items={items} onAddToCard={onAddToCard} />
+         <ComixesSection items={items} onAddToCard={onAddToCard} />
       </div>
       <div id="aboutUs">
-      <BlueSection />
+         <BlueSection />
       </div>
-      <UserSection/>
+         <UserSection/>
       <div id="comunication">
-      <MapSection/>
+         <MapSection/>
       </div>
       
-        </>
+  </>
     )
 }
 

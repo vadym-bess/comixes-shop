@@ -52,7 +52,6 @@ function Modal() {
         <div className={styles.modalBackground}>
           <div className={styles.modal}>
             <div className={styles.modalContent}>
-              {/* <span className={styles.close} onClick={() => setIsOpen(false)}>&times;</span> */}
               <p className={styles.modalText}>আমাদের পৃষ্ঠাটি আপনার অভিজ্ঞতা উন্নত করতে কুকিজ ব্যবহার করে। আপনি চাইলে তাদের নিষ্ক্রিয় করতে পারেন, কিন্তু এটি ওয়েবসাইটের কিছু কার্যক্ষমতা সীমিত করতে পারে। আমাদের কুকি নীতি দেখুন।</p>
               <div className={styles.buttonThumb}>
                 <button onClick={() => setIsOpen(false)} className={styles.leftButton}>সব কুকিজকে গ্রহণ করুন</button>
@@ -66,7 +65,6 @@ function Modal() {
         <div className={styles.modalBackground}>
           <div className={styles.modal2}>
             <div className={styles.modalContent2}>
-              {/* <span className={styles.close} onClick={closeSecondModal}>&times;</span> */}
               <h2 className={styles.modalTitle}>কুকিজের সেটিংস</h2>
               <p className={styles.modalText}>কুকিস হচ্ছে সাইট দ্বারা প্রেরিত এবং ওয়েব ব্রাউজারে আপনার কম্পিউটারে সংরক্ষিত ছোট ডেটা প্রতি সময় আপনি ওয়েবে অনুপ্রবেশ করছেন যাবতীয়। প্রতিটি বার্তা একটি ক্ষুদ্র ফাইলের মধ্যে সংরক্ষণ করা হয়, যা কুকি বলা হয়। যখন আপনি সার্ভার থেকে অন্য পৃষ্ঠা অনুরোধ করেন, আপনার ব্রাউজারটি কুকিটি আবার সার্ভারে ফিরিয়ে পাঠায়। কুকিস হলো এমন একটি বিশ্বস্ত পদ্ধতি যাতে সাইটগুলি ব্যবহারকারীর সংজ্ঞা মনে রাখতে বা ব্রাউজিং এর সময় ব্যবহারকারীর ক্রিয়াকলাপ নিবন্ধন করতে পারে।</p>
               <div className={styles.checkboxThumb}> 

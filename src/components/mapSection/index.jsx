@@ -15,7 +15,7 @@ function MapSection() {
   src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2644485.176948077!2d85.93870108742995!3d24.09532647401836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sHouse%2045%2C%20Road%208%2C%20Dhanmondi%2C%20Dhaka%201205%2C%20Bengal!5e0!3m2!1sen!2sua!4v1711052482127!5m2!1sen!2sua"
   title="Карта местоположения"
   loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade"
+  referrerPolicy="no-referrer-when-downgrade"
 ></iframe>
                     <div className={styles.mapTextThumb}>
                         <p className={styles.mapText}>বাড়ি ৪৫, রাস্তা ৮, ধানমন্ডি, ঢাকা ১২০৫, বাংল</p>
