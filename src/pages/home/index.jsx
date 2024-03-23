@@ -7,7 +7,7 @@ import UserSection from '../../components/userSection';
 import MapSection from '../../components/mapSection';
 
 
-function Home() {
+function Home({onAddToCard, items}) {
 
   
 
@@ -16,7 +16,7 @@ function Home() {
       <HeroSection />
       <Populars />
       <div id="comixes">
-          <ComixesSection />
+      <ComixesSection items={items} onAddToCard={onAddToCard} />
       </div>
       <div id="aboutUs">
       <BlueSection />

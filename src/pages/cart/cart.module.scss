@@ -36,7 +36,7 @@ text-decoration: none;
 cursor: pointer;
 }
 
-.cartThumb{
+.cartThumb {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -44,33 +44,143 @@ cursor: pointer;
     background-color: #F1F2F5;
 }
 
-.cartInnerThumb{
+.cartInnerThumb {
     width: 100%;
-    max-width: 1140px;
+    max-width: 740px;
     margin: 0 auto;
+    padding: 10px;
+
 }
 
-.titleThumb{
-margin-top: 61px;
-padding-left: 20px;
-padding-right: 20px;
-}
-
-.cartImageThumb{
+.cartItem{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    margin-top: 20px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
-.cartImageSmallThumb{
+.pictureThumb{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.priceTitle{
+    color: #343434;
+font-family: "Montserrat",sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.titleThumb {
+    margin-top: 61px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.cartImageThumb {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+
+    @media (min-width: 1140px) {
+        flex-direction: row;
+        gap: 20px;
+    }
 }
 
-.imageTitle{
+
+.itemTitle{
+    color: #2B1E18;
+font-family: "Montserrat", sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 177.778% */
+letter-spacing: -0.5px;
+}
+
+.imageTitle {
+    color: #343434;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.itemPrice{
+    color: #343434;
+    font-family: "Montserrat", sans-serif;
+font-size: 19px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 168.421% */
+letter-spacing: -0.2px;
+}
+
+.imageThumb {
+    width: 86px;
+    height: 86px;
+}
+
+.itemImage{
+    width: 86px;
+    height: 86px;
+}
+
+.comixName {
+    color: #2B1E18;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 177.778% */
+    letter-spacing: -0.5px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+}
+
+.idThumb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 60px;
+}
+
+.quantityThumb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.quantityTitle{
     color: #343434;
 font-family: "Montserrat", sans-serif;
 font-size: 18px;
@@ -80,47 +190,42 @@ line-height: normal;
 text-transform: uppercase;
 }
 
-.imageThumb{
-width: 86px;
-}
-
-.comixName{
-    color: #2B1E18;
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
+.totalText{
+    color: #343434;
+font-family: "Montserrat", sans-serif;
+font-size: 18px;
 font-style: normal;
 font-weight: 600;
-line-height: 32px; /* 177.778% */
-letter-spacing: -0.5px;
+line-height: normal;
+text-transform: uppercase;
 }
 
-.close{
-    font-size: 20px;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
-    }
-}
-
-.idThumb{
+.totalThumb{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 60px;
+    padding: 20px;
 }
 
-.calculator{
+.totalAmount{
+    color: #343434;
+    font-family: "Montserrat", sans-serif;
+    font-size: 19px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 168.421% */
+letter-spacing: -0.2px;
+}
+
+.calculator {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
 
-.minus{
+.minus,
+.plus {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,23 +234,8 @@ letter-spacing: -0.5px;
     height: 30px;
     border-radius: 50%;
     cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
-    }
-
-}
-
-.plus{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #E7E9ED;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
+    font-size: 22px;
+    border: none;
 
     &:hover {
         transform: scale(1.1);
@@ -153,20 +243,25 @@ letter-spacing: -0.5px;
     }
 }
 
-.sum{
+.minus:hover,
+.plus:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.sum {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
-height: 33px;
-flex-shrink: 0;
-border-radius: 3px;
-border: 1px solid #E7E9ED;
-background: #FFF;
-
+    height: 33px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    border: 1px solid #E7E9ED;
+    background: #FFF;
 }
 
-.buttonsThumb{
+.buttonsThumb {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -177,13 +272,13 @@ background: #FFF;
     padding-bottom: 40px;
     padding-left: 40px;
 
-    @media (min-width:1140px) {
+    @media (min-width: 1140px) {
         flex-direction: row;
         justify-content: space-between;
     }
 }
 
-.whiteButton{
+.whiteButton {
     color: #343434;
     text-align: center;
     font-family: "Montserrat", sans-serif;
@@ -193,20 +288,20 @@ background: #FFF;
     line-height: 32px; /* 188.235% */
     letter-spacing: -0.6px;
     width: 200px;
-height: 64px;
-flex-shrink: 0;
-border-radius: 8px;
-background: #FFF;
-border: none;
-cursor: pointer;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #FFF;
+    border: none;
+    cursor: pointer;
 
-&:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
 }
 
-.redButton{
+.redButton {
     color: #FFF;
     text-align: center;
     font-family: "Montserrat", sans-serif;
@@ -215,16 +310,15 @@ cursor: pointer;
     font-weight: 600;
     line-height: normal;
     width: 207px;
-height: 64px;
-flex-shrink: 0;
-border-radius: 12px;
-background: #F4C078;
-border: none;
-cursor: pointer;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #F4C078;
+    border: none;
+    cursor: pointer;
 
-&:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
 }

@@ -1,106 +1,68 @@
 import React from 'react';
 import styles from './comixesSection.module.scss';
+import { useState } from 'react';
+
 import eagle from '../images/eagle.jpg';
 import lion from '../images/lion.jpg';
 import fisher from '../images/fisher.jpg';
 import warrior from '../images/warrior.jpg';
 import monkey from '../images/monkey.jpg';
 import tiger from '../images/tiger.jpg';
+import axios from 'axios';
 
-function ComixesSection() {
-    return(
-     <div className={styles.comixesMainThumb}>
-        <h2 className={styles.title}>সমস্ত পণ্য অন্বেষণ করুন</h2>
-        <div className={styles.comixesInnerThumb}>
+const imageMap = {
+    eagle: eagle,
+    lion: lion,
+    fisher: fisher,
+    warrior: warrior,
+    monkey: monkey,
+    tiger: tiger
+}
 
-            <div className={styles.cardThumb}>
-               <img loading='lazy' className={styles.cardImage} src={eagle} alt="eagle" />
-                <p className={styles.cardTitle}>দিগন্তীয় সামগ্রী</p>
-                <div className={styles.idThumb}>
-                    <p className={styles.cardText}>মূল্য:</p>
-                    <p className={styles.cardId}>BDT 3439</p>
-                </div>
-                <div className={styles.cardButtonThumb}>
-                    <button className={styles.button}>
-                       ক্রয় করুন
-                    </button>
-                </div>
-            </div>
+function ComixesSection({ items }) {
+    const [cartItems, setCartItems] = useState([]);
 
-            <div className={styles.cardThumb}>
-               <img loading='lazy' className={styles.cardImage} src={lion} alt="lion" />
-                <p className={styles.cardTitle}>দিগন্তীয় সামগ্রী</p>
-                <div className={styles.idThumb}>
-                    <p className={styles.cardText}>মূল্য:</p>
-                    <p className={styles.cardId}>BDT 3439</p>
-                </div>
-                <div className={styles.cardButtonThumb}>
-                    <button className={styles.button}>
-                       ক্রয় করুন
-                    </button>
-                </div>
-            </div>
+    const getImage = (item) => {
+        if (imageMap.hasOwnProperty(item.imageUrl)) {
+            return imageMap[item.imageUrl];
+        } else {
+            return null;
+        }
+    }
 
-            <div className={styles.cardThumb}>
-               <img loading='lazy' className={styles.cardImage} src={fisher} alt="fisher" />
-                <p className={styles.cardTitle}>দিগন্তীয় সামগ্রী</p>
-                <div className={styles.idThumb}>
-                    <p className={styles.cardText}>মূল্য:</p>
-                    <p className={styles.cardId}>BDT 3439</p>
-                </div>
-                <div className={styles.cardButtonThumb}>
-                    <button className={styles.button}>
-                       ক্রয় করুন
-                    </button>
-                </div>
-            </div>
+    const handleClick = (item) => {
+        onAddToCart(item);
+    };
 
-            <div className={styles.cardThumb}>
-               <img loading='lazy' className={styles.cardImage} src={warrior} alt="warrior" />
-                <p className={styles.cardTitle}>মাপযুক্ত যুদ্ধের নায়কের ইতিহাস</p>
-                <div className={styles.idThumb}>
-                    <p className={styles.cardText}>মূল্য:</p>
-                    <p className={styles.cardId}>BDT 4531</p>
-                </div>
-                <div className={styles.cardButtonThumb}>
-                    <button className={styles.button}>
-                       ক্রয় করুন
-                    </button>
-                </div>
-            </div>
+    const onAddToCart = (obj) => {
+        axios.post('https://65fe77d8b2a18489b3861712.mockapi.io/cart', obj);
+        if (!cartItems.some((item) => item.id === obj.id)) {
+          setCartItems((prev) => [...prev, obj]);
+        }
+      };
 
-            <div className={styles.cardThumb}>
-               <img loading='lazy' className={styles.cardImage} src={monkey} alt="monkey" />
-                <p className={styles.cardTitle}>মাপযুক্ত যুদ্ধের নায়কের ইতিহাস</p>
-                <div className={styles.idThumb}>
-                    <p className={styles.cardText}>মূল্য:</p>
-                    <p className={styles.cardId}>BDT 2499</p>
-                </div>
-                <div className={styles.cardButtonThumb}>
-                    <button className={styles.button}>
-                       ক্রয় করুন
-                    </button>
-                </div>
-            </div>
-
-            <div className={styles.cardThumb}>
-               <img loading='lazy' className={styles.cardImage} src={tiger} alt="tiger" />
-                <p className={styles.cardTitle}>মাপযুক্ত যুদ্ধের নায়কের ইতিহাস</p>
-                <div className={styles.idThumb}>
-                    <p className={styles.cardText}>মূল্য:</p>
-                    <p className={styles.cardId}>BDT 7429</p>
-                </div>
-                <div className={styles.cardButtonThumb}>
-                    <button className={styles.button}>
-                       ক্রয় করুন
-                    </button>
-                </div>
+    return (
+        <div className={styles.comixesMainThumb}>
+            <h2 className={styles.title}>সমস্ত পণ্য অন্বেষণ করুন</h2>
+            <div className={styles.comixesInnerThumb}>
+                {items.map((item) => (
+                    <div className={styles.cardThumb} key={item.id}>
+                        <img loading='lazy' className={styles.cardImage} src={getImage(item)} alt={item.title} />
+                        <p className={styles.cardTitle}>{item.title}</p>
+                        <div className={styles.idThumb}>
+                            <p className={styles.cardText}>মূল্য:</p>
+                            <p className={styles.cardId}>{item.price}</p>
+                        </div>
+                        <div className={styles.cardButtonThumb}>
+                            <button className={styles.button} onClick={() => handleClick(item)}>
+                                ক্রয় করুন
+                            </button>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
-     </div>
     )
 }
 
 export default ComixesSection;
-
-
